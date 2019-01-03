@@ -15,8 +15,6 @@ CREATE TABLE dw_sales.dim_product
 )
 clustered by (product_sk ) into 8 buckets
 stored as orc tblproperties('transactional'='true');
-
-
 /*==============================================================*/
 /* Table: dim_customer                                          */
 /*==============================================================*/
