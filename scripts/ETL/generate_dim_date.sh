@@ -13,7 +13,7 @@ while [ $min -le $max ]
 do
 	month=`date -d "$tempdate" +%m`
 	month_name=`date -d "$tempdate" +%B`
-	quarter=`echo $month | awk '{print int(($0-1)/3 +1 }'`
+	quarter=`echo $month | awk '{print int(($0-1)/3 +1) }'`
 	year=`date -d "$tempdate" +%Y`
 	echo ${min}","${tempdate}","${month}","${month_name}","${quarter}","${year} >> ./dim_date.csv
 	tempdate=`date -d "+$min day $date1" +%F`
